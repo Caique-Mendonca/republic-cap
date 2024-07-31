@@ -203,10 +203,6 @@ header{
     }
 }
 @media (max-width: 430px){
-    .header-description{
-       margin-top: 20px;
-       margin-left: 0;
-    }
     .header-description h1{
         font-size: 30px;
     }
