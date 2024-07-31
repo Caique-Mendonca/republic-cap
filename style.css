@@ -8,18 +8,29 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.header{
+:root{
+    --azul-claro: #0149AF;
+    --azul-escuro: #071E47;
+    --branco-: #EFEFEF;
+}
+header{
     background-color: #0149AF;
     box-shadow: 0px 3px 10px #464646;
+    border-radius: 0px 0px 8px 8px;
+    background-image: url(images/pexels-iamkami-1144721.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
 }
 .nav-img{
-    width: 4vw;
+    width: 5rem;
 }
 .nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 6rem;
+    padding: 1rem 6rem;
 }
 .nav-logo{
     display: flex;
@@ -44,8 +55,109 @@
     margin: 0px 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    transition: color 300ms;
 }
-.nav-item:hover{
+.nav-link{
+    text-decoration: none;
+    color: black;
+    transition: color 300ms;
+    font-weight: bold;
+}
+.nav-link:hover{
     color: #fff;
+}
+#instagram-nav{
+    display: none;
+    font-size: 20px;
+    color: #fff;
+}
+.icon-instagram{
+    font-size: 30px;
+    color: #fff;
+}
+.icon-instagram::after{
+    content: 'republic.cap';
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.main-produtos{
+    padding: 10px;
+}
+.div-principais-produtos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.principais-produtos{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: var(--azul-claro);
+}
+.main-produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.produtos-cards{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    box-shadow: 0px 3px 10px #464646;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20vw;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 20px;
+    transition: transform 300ms ease;
+}
+.card:hover{
+    transform: translate(0px, -6px);
+}
+.card h2{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+}
+.card p{
+    font-size: 23px;
+    margin-top: 8px;
+}
+.img-card{
+    width: 200px;
+}
+@media (max-width: 653px){
+    .nav-bar{
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-logo{
+        flex-direction: row;
+    }
+    .nav-socials{
+        display: none;
+    }
+    .nav-list{
+        margin-top: 6px;
+        background-color: var(--azul-escuro);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    #instagram-nav{
+        display: block;
+    }
+    .nav-link{
+        color: #EFEFEF;
+    }
 }
