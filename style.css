@@ -10,10 +10,12 @@
     font-family: sans-serif;
 }
 :root{
+    --azul-principal: #042047;
     --azul-claro: #0149AF;
     --azul-escuro: #071E47;
     --branco-: #EFEFEF;
     --branco-transparente: #efefefce;
+    --footer-color: rgb(245, 245, 247);
 }
 header{
     background-color: #0149AF;
@@ -40,7 +42,7 @@ header{
     font-size: 60px;
 }
 .nav-img{
-    width: 5rem;
+    width: 4.5rem;
 }
 .nav-bar{
     display: flex;
@@ -49,21 +51,20 @@ header{
     padding: 1rem 6rem;
     width: 100%;
     transition: background-color 300ms ease;
-}
-.nav-bar:hover{
-    background-color: var(--branco-transparente);
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .nav-logo{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 .nav-logo p{
     font-family: "Baskervville";
     font-weight: 700;
-    margin-top: 6px;
-    color: #EFEFEF;
-    transition: color 300ms ease;
+    margin-left: 8px;
+    color: rgba(255, 255, 255, 0.8);
 }
 .nav-list{
     display: flex;
@@ -76,12 +77,13 @@ header{
 }
 .nav-item{
     margin: 0px 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
 }
 .nav-link{
     text-decoration: none;
-    color: #000;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Baskervville", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
     transition: color 300ms;
     font-weight: bold;
 }
@@ -93,9 +95,12 @@ header{
     font-size: 20px;
     color: #fff;
 }
+#home-nav{
+    color: var(--azul-claro);
+}
 .icon-instagram{
     font-size: 30px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     transition: color 300ms ease;
 }
 .icon-instagram::after{
@@ -103,6 +108,8 @@ header{
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     margin-left: 5px;
+    position: relative;
+    bottom: 5px;
 }
 .main-produtos{
     padding: 10px;
@@ -115,9 +122,9 @@ header{
     align-items: center;
 }
 .principais-produtos{
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    color: var(--azul-claro);
+    font-size: 30px;
+    font-family: "Baskervville", sans-serif;
+    color: var(--azul-escuro);
 }
 .main-produtos{
     display: flex;
@@ -148,20 +155,131 @@ header{
 }
 .card h2{
     font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-size: 20px;
+    color: var(--azul-principal);
 }
 .card p{
     font-size: 23px;
     margin-top: 8px;
+    font-weight: bold;
+    color: var(--azul-principal);
 }
 .img-card{
     width: 200px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+.div-pix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-pix p{
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.fa-pix{
+    color: var(--azul-principal);
+    margin: 4px;
+    font-size: 13px;
+}
+footer{
+    background-color: var(--footer-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.logo-footer{
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.16) ;
+}
+.logo-footer img{
+    margin-bottom: 20px;
+}
+.logo-footer p{
+    color: #000;
+    font-family: "Baskervville";
+    font-weight: 700;
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+.footer-components{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 85vw;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.16);
+    padding-bottom: 20px;
+}
+.footer-redes-sociais{
+    display: flex;
+    flex-direction: column;
+}
+footer h2{
+    font-family: "Inter", sans-serif;
+    font-family: 400;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-component{
+    margin: 0px 20px;
+}
+.redes-sociais{
+    display: flex;
+    justify-content: center;
+}
+.redes-sociais a{
+    color: #000;
+    margin: 0px 8px;
+}
+.creditos ul{
+    list-style: none;
+}
+.direitos{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.direitos p{
+    font-family: sans-serif;
+    font-size: 13px;
+}
 @media (max-width: 1005px){
     .header-description h1{
         font-size: 45px;
+    }
+}
+@media (max-width: 827px){
+    .nav-bar{
+        flex-direction: column;
+        padding: 0;
+        box-shadow: 0px 3px 10px #464646;
+    }
+    .nav-logo{
+        margin-top: 16px;
+    }
+    .nav-socials{
+        display: none;
+    }
+    .nav-socials{
+        display: none;
+    }
+    #instagram-nav{
+        display: block;
+    }
+    .nav-list{
+        margin-top: 4px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
     }
 }
 @media (max-width: 748px){
@@ -170,38 +288,11 @@ header{
     }
 }
 @media (max-width: 653px){
-    .nav-bar{
-        flex-direction: column;
-        padding: 0;
-        background-color: #EFEFEF;
-        box-shadow: 0px 3px 10px #464646;
-    }
-    .nav-logo{
-        flex-direction: row;
-    }
-    .nav-socials{
-        display: none;
-    }
-    .nav-list{
-        margin-top: 6px;
-        background-color: transparent;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-    #instagram-nav{
-        display: block;
-    }
     .header-description h1{
         font-size: 30px;
     }
-    .nav-logo p{
-        color: #000;
-        margin-left: 10px;
-    }
 }
+
 @media (max-width: 430px){
     .header-description h1{
         font-size: 30px;
