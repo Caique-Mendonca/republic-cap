@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
 *{
     margin: 0;
@@ -40,8 +41,8 @@ a{
 }
 .header-description h1{
     color: var(--azul-escuro);
-    font-family: "Baskervville", sans-serif;
-    font-weight: 400;
+    font-family: "Old Standard TT", sans-serif;
+    font-weight: bold;
     font-size: 60px;
 }
 .nav-img{
@@ -51,20 +52,21 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 6rem;
+    padding: 1rem 4rem;
     width: 100%;
     transition: background-color 300ms ease;
     position: sticky;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #23405D;
     backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0px 3px 10px #464646;
 }
 .nav-logo{
     display: flex;
     align-items: center;
 }
 .nav-logo p{
-    font-family: "Baskervville";
+    font-family: "Old Standard TT", serif;
     font-weight: 700;
     margin-left: 8px;
     color: rgba(255, 255, 255, 0.8);
@@ -84,14 +86,17 @@ a{
 .nav-link{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
-    font-family: "Baskervville", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 17px;
     font-weight: bold;
     transition: color 300ms;
     font-weight: bold;
+    transition: border 300ms;
+    border-bottom: #23405D 2px solid;
+    padding-bottom: 8px;
 }
 .nav-link:hover{
-    text-decoration: underline;
+    border-bottom: 2px rgba(255, 255, 255, 0.8) solid ;
 }
 #instagram-nav{
     display: none;
@@ -111,7 +116,20 @@ a{
     position: relative;
     bottom: 5px;
 }
+.icon-casa-nav{
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+}
+.icon-sobre-nav{
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+}
 .main-produtos{
+    margin-top: 10px;
     padding: 10px;
 }
 .div-principais-produtos{
@@ -123,7 +141,7 @@ a{
 }
 .principais-produtos{
     font-size: 30px;
-    font-family: "Baskervville", sans-serif;
+    font-family: "Old Standard TT", serif;
     color: var(--azul-escuro);
 }
 .main-produtos{
